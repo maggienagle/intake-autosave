@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intake Settings</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="page-header">
+        <div class="header-container">
+            <h1>Intake settings</h1>
+            <p class="subtitle">Configure the information you request from patients</p>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <nav class="sidebar">
+            <div class="sidebar-item selected" data-page="insurance">
+                <span>Insurance & IDs</span>
+                <span class="checkmark">✓</span>
+            </div>
+            
+            <div class="sidebar-item parent" data-page="forms">
+                <span>Forms</span>
+            </div>
+            
+            <div class="sidebar-subnav" style="display: none;">
+                <div class="sidebar-sub-item" data-page="demographic-form">
+                    <span>Demographic</span>
+                </div>
+                <div class="sidebar-sub-item add-form">
+                    <span class="plus-icon">+</span>
+                    <span>New form</span>
+                </div>
+            </div>
+            
+            <div class="sidebar-item" data-page="communication">
+                <span>Communication preferences</span>
+            </div>
+        </nav>
+        
+        <main class="content">
+            <div class="settings-container" id="insurance-content" style="display: block;">
+                <h2>Insurance & IDs</h2>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Medical insurance card</h3>
+                        <p>We'll ask patients to submit a copy of their medical insurance card before the appointment</p>
+                    </div>
+                    <div class="toggle-container">
+                        <label class="toggle">
+                            <input type="checkbox" checked data-section="medical-patients">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="patient-types-section" id="medical-patients">
+                    <h3>Select patient types</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="medical-patients">
+                            <span class="checkmark"></span>
+                            <span>New patients</span>
+                        </label>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="medical-patients">
+                            <span class="checkmark"></span>
+                            <span>Existing patients</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Dental insurance</h3>
+                        <p>We'll ask patients to submit their dental insurance information, if applicable, before the appointment</p>
+                    </div>
+                    <div class="toggle-container">
+                        <label class="toggle">
+                            <input type="checkbox" data-section="dental-patients">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="patient-types-section" id="dental-patients" style="display: none;">
+                    <h3>Select patient types</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="dental-patients">
+                            <span class="checkmark"></span>
+                            <span>New patients</span>
+                        </label>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" data-parent="dental-patients">
+                            <span class="checkmark"></span>
+                            <span>Existing patients</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Vision insurance</h3>
+                        <p>We'll ask patients to submit their vision insurance information, if applicable, before the appointment</p>
+                    </div>
+                    <div class="toggle-container">
+                        <label class="toggle">
+                            <input type="checkbox" data-section="vision-patients">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="patient-types-section" id="vision-patients" style="display: none;">
+                    <h3>Select patient types</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="vision-patients">
+                            <span class="checkmark"></span>
+                            <span>New patients</span>
+                        </label>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" data-parent="vision-patients">
+                            <span class="checkmark"></span>
+                            <span>Existing patients</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Government ID card</h3>
+                        <p>We'll ask patients to submit a copy of their ID card before the appointment</p>
+                    </div>
+                    <div class="toggle-container">
+                        <label class="toggle">
+                            <input type="checkbox" data-section="government-patients">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="patient-types-section" id="government-patients" style="display: none;">
+                    <h3>Select patient types</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="government-patients">
+                            <span class="checkmark"></span>
+                            <span>New patients</span>
+                        </label>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="government-patients">
+                            <span class="checkmark"></span>
+                            <span>Existing patients</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="settings-container" id="demographic-form-content" style="display: none;">
+                <h2>Demographic form</h2>
+                
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <h3>Request Demographic form</h3>
+                        <p>We'll ask patients to submit this form before the appointment</p>
+                    </div>
+                    <div class="toggle-container">
+                        <label class="toggle">
+                            <input type="checkbox" checked data-section="demographic-patients">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="patient-types-section" id="demographic-patients">
+                    <h3>Select patient types</h3>
+                    <div class="checkbox-group">
+                        <label class="checkbox-container">
+                            <input type="checkbox" checked data-parent="demographic-patients">
+                            <span class="checkmark"></span>
+                            <span>New patients</span>
+                        </label>
+                        
+                        <label class="checkbox-container">
+                            <input type="checkbox" data-parent="demographic-patients">
+                            <span class="checkmark"></span>
+                            <span>Existing patients</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="form-section">
+                    <div class="section-header">
+                        <div>
+                            <h3>Preview your form</h3>
+                            <p class="section-description">You can preview your form as a patient</p>
+                        </div>
+                        <button class="outline-button">
+                            <span class="preview-icon">⎋</span> Preview form
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="form-section">
+                    <div class="section-header">
+                        <div>
+                            <h3>Request updates to your form</h3>
+                            <p class="section-description">You can add comments and mark fields as required</p>
+                        </div>
+                        <button class="outline-button">Request updates</button>
+                    </div>
+                </div>
+                
+                <div class="divider"></div>
+                
+                <div class="form-section">
+                    <div class="section-header">
+                        <div>
+                            <h3>Source file</h3>
+                            <p class="section-description">This is your original form that was uploaded on XX/XX/XXXX</p>
+                        </div>
+                        <button class="outline-button">Replace file</button>
+                    </div>
+                    <div class="file-name">SohoMedical_DemographicForm_2023.pdf</div>
+                </div>
+                
+                <div class="help-section">
+                    <p>Questions about how forms work? <a href="#" class="text-link">Learn more</a></p>
+                </div>
+            </div>
+            
+            <div class="settings-container" id="communication-content" style="display: none;">
+                <h2>Communication preferences</h2>
+                <p>Communication settings will appear here</p>
+            </div>
+        </main>
+    </div>
+    
+    <div class="toast" id="settings-toast">
+        <div class="toast-content">
+            <span class="checkmark-icon">✓</span>
+            <span class="toast-message">Settings saved!</span>
+        </div>
+    </div>
+    
+    <script src="js/settings.js"></script>
+</body>
+</html> 
